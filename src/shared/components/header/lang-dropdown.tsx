@@ -6,8 +6,13 @@ import { useLocale, useTranslations } from 'next-intl';
 import { setUserLocale } from '@/shared/services/locale';
 import { Locale } from '@/i18n/config';
 import { langItems } from '@/config';
+import { cn } from '@/shared/utils/string';
 
-export const LangDropdown = () => {
+type LangDropdownProps = {
+  isMobile?: boolean;
+};
+
+export const LangDropdown = ({ isMobile = false }: LangDropdownProps) => {
   const [showDropdown, setShowDropdown] = useState<boolean>(false);
   const t = useTranslations('header');
   const locale = useLocale();
@@ -20,17 +25,31 @@ export const LangDropdown = () => {
 
   return (
     <>
-      <li className="relative">
+      <div className="relative">
         <button
           onClick={() => setShowDropdown(!showDropdown)}
-          className="flex h-10 items-center gap-x-1"
+          className={cn('flex h-10 items-center justify-center', {
+            'w-20 rounded-lg border border-[#AFAFAF] bg-[#F6F6F6]': isMobile,
+          })}
         >
-          <img src={langItems[locale].icon} alt="flag" />
-          <img src="/icons/ic-dropdown.png" alt="arrow" />
+          <div className="flex items-center gap-x-1">
+            <img src={langItems[locale].icon} alt="flag" />
+            <img
+              src={`/icons/${isMobile ? 'ic-dropdown-black' : 'ic-dropdown'}.png`}
+              alt="arrow"
+            />
+          </div>
         </button>
         {showDropdown && (
-          <div className="absolute right-0 top-10">
-            <div className="h-20 w-[156px] rounded-lg border-border bg-white p-2">
+          <div
+            className={cn('absolute top-12', isMobile ? 'left-0' : 'right-0')}
+          >
+            <div
+              className={cn(
+                'h-20 w-[156px] rounded-lg border bg-white p-2',
+                isMobile ? 'border-[#AFAFAF]' : 'border-border',
+              )}
+            >
               {Object.keys(langItems).map((key) => (
                 <button
                   key={key}
@@ -51,7 +70,7 @@ export const LangDropdown = () => {
             </div>
           </div>
         )}
-      </li>
+      </div>
     </>
   );
 };

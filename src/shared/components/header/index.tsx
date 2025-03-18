@@ -11,9 +11,9 @@ export const Header = () => {
   const t = useTranslations('header');
 
   return (
-    <header className="absolute inset-x-0 top-0 z-20 flex w-full items-center">
+    <header className="fixed inset-x-0 top-0 z-20 flex w-full items-center">
       <MaxWidthWrapper>
-        <div className="flex h-[7.5rem] items-center justify-between">
+        <div className="flex items-center justify-between pb-6 pt-1 md:py-5">
           <Link href="/">
             <Logo />
           </Link>

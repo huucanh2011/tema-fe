@@ -6,6 +6,7 @@ import { Montserrat, Playfair_Display } from 'next/font/google';
 import { getLocale } from 'next-intl/server';
 import { NextIntlClientProvider } from 'next-intl';
 
+import { ScrollToTop } from '@/shared/components/scroll-to-top';
 import { TailwindIndicator } from '@/shared/components/tailwind-indicator';
 
 const montserrat = Montserrat({
@@ -73,8 +74,9 @@ export default async function RootLayout({ children }: RootLayoutProps) {
       className={[montserrat.variable, playfairDisplay.variable].join(' ')}
     >
       <head />
-      <body className="relative min-h-screen antialiased">
+      <body className="relative min-h-screen scroll-smooth font-mont antialiased focus:scroll-auto">
         <NextIntlClientProvider>{children}</NextIntlClientProvider>
+        <ScrollToTop />
         <TailwindIndicator />
       </body>
     </html>
