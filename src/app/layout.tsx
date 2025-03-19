@@ -74,7 +74,7 @@ export default async function RootLayout({ children }: RootLayoutProps) {
       className={[montserrat.variable, playfairDisplay.variable].join(' ')}
     >
       <head />
-      <body className="relative min-h-screen scroll-smooth font-mont antialiased focus:scroll-auto">
+      <body className="relative min-h-screen scroll-smooth bg-white font-mont antialiased focus:scroll-auto">
         <NextIntlClientProvider>{children}</NextIntlClientProvider>
         <ScrollToTop />
         <TailwindIndicator />

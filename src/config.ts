@@ -1,7 +1,9 @@
-type MenuItem = {
-  label: string;
-  href: string;
-};
+import {
+  AboutUsItem,
+  LangItem,
+  MenuItem,
+  OurGamesItem,
+} from './shared/types/types';
 
 export const menuItems: MenuItem[] = [
   {
@@ -22,13 +24,6 @@ export const menuItems: MenuItem[] = [
   },
 ];
 
-type LangItem = {
-  [key: string]: {
-    label: string;
-    icon: string;
-  };
-};
-
 export const langItems: LangItem = {
   vi: {
     label: 'vietnamese',
@@ -38,12 +33,6 @@ export const langItems: LangItem = {
     label: 'english',
     icon: '/icons/ic-flg-en.png',
   },
-};
-
-type AboutUsItem = {
-  icon: string;
-  title: string;
-  description: string;
 };
 
 export const aboutUsItems: AboutUsItem[] = [
@@ -63,12 +52,6 @@ export const aboutUsItems: AboutUsItem[] = [
     description: 'team_description',
   },
 ];
-
-export type OurGamesItem = {
-  title: string;
-  description: string;
-  image: string;
-};
 
 export const ourGamesItems: OurGamesItem[] = [
   {
@@ -143,4 +126,20 @@ export const ourGamesItems: OurGamesItem[] = [
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     image: '/images/games/egypt-game.png',
   },
+];
+
+export const ourPartnersItems: string[] = [
+  '/images/partners/ea.png',
+  '/images/partners/game.png',
+  '/images/partners/power-up.png',
+  '/images/partners/disney.png',
+  '/images/partners/book-pro.png',
+  '/images/partners/sega.png',
+  '/images/partners/2k.png',
+];
+
+export const socialItems: string[] = [
+  '/icons/ic-twitter.png',
+  '/icons/ic-facebook.png',
+  '/icons/ic-linkedin.png',
 ];

@@ -33,6 +33,16 @@
     "title": "Trò chơi",
     "description": "Là nhà tiên phong trong lĩnh vực trò chơi ứng dụng dành cho thiết bị di động, chúng tôi tự hào về tính độc đáo và cá tính, cung cấp cho người chơi toàn cầu những trò chơi hiện đại có cốt truyện tuyệt vời, hiệu ứng âm thanh giật gân và hoạt ảnh hoành tráng không ngừng gây ấn tượng."
   },
+  "footer": {
+    "address": "Địa Chỉ",
+    "address_line1": "Valletta Buildings, South Street, Valletta - VLT 1103 Malta, Mỹ",
+    "address_line2": "Số 20 đường Phan Đăng Lưu, quận Hải Châu, thành phố Đà Nẵng, Việt Nam",
+    "or": "hoặc",
+    "subscribe": "Theo dõi",
+    "subscribe_description": "Đăng ký nhận bản tin của chúng tôi và là người đầu tiên biết về các cập nhật của chúng tôi",
+    "copyright": "2017 Copyright. Policy.",
+    "email": "Email"
+  },
   "form": {
     "email": {
       "placeholder": "Địa chỉ email của bạn"

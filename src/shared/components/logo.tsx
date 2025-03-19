@@ -1,14 +1,15 @@
-import Image from 'next/image';
+import { cn } from '@/shared/utils/string';
 
-export const Logo = () => {
+type LogoProps = {
+  className?: string;
+};
+
+export const Logo = ({ className }: LogoProps) => {
   return (
-    <Image
+    <img
       src="/images/logo-white.png"
       alt="logo"
-      width={110}
-      height={64}
-      priority
-      className="h-10 w-auto md:h-16"
+      className={cn('h-10 w-auto md:h-16', className)}
     />
   );
 };

@@ -12,10 +12,10 @@ export const AboutUs = () => {
           {/* About us */}
           <div className="col-span-1 space-y-10 md:space-y-[80px] md:px-0">
             <div>
-              <h2 className="mb-4 font-playfair text-[40px] font-black leading-[50px] md:mb-10 md:text-6xl md:leading-[60px]">
+              <h2 className="mb-4 font-playfair text-40 font-black leading-[50px] md:mb-10 md:text-6xl md:leading-[60px]">
                 {t('title')}
               </h2>
-              <p className="font-mont text-sm text-[#757575]">
+              <p className="font-mont text-sm text-dark-gray2">
                 {t('description')}
               </p>
             </div>
@@ -23,12 +23,10 @@ export const AboutUs = () => {
             <div className="grid grid-cols-2 gap-4 pb-10 md:grid-cols-1 md:gap-10">
               <div className="col-span-1">
                 <div className="space-y-1">
-                  <p className="text-[44px] font-bold text-[#079BEE] md:text-[80px]">
+                  <p className="text-44 font-bold text-blue md:text-80">
                     600
-                    <span className="text-xl md:text-[40px]">
-                      {t('million')}
-                    </span>
-                    <span className="text-4xl md:text-[80px]">+</span>
+                    <span className="text-xl md:text-40">{t('million')}</span>
+                    <span className="text-4xl md:text-80">+</span>
                   </p>
                   <p className="text-2xl font-bold leading-[30px]">
                     {t('users')}
@@ -37,8 +35,8 @@ export const AboutUs = () => {
               </div>
               <div className="col-span-1">
                 <div className="space-y-1">
-                  <p className="text-[44px] font-bold text-[#079BEE] md:text-[80px]">
-                    135<span className="text-4xl md:text-[80px]">+</span>
+                  <p className="text-44 font-bold text-blue md:text-80">
+                    135<span className="text-4xl md:text-80">+</span>
                   </p>
                   <p className="text-2xl font-bold leading-[30px]">
                     {t('games')}
@@ -49,8 +47,8 @@ export const AboutUs = () => {
           </div>
 
           {/* About us items */}
-          <div className="-mx-4 bg-[#EEEEEE] md:mx-0">
-            <div className="space-y-10 px-4 py-10 md:px-[75px] md:py-[113px]">
+          <div className="-mx-4 bg-border md:mx-0">
+            <div className="space-y-10 px-4 py-10 md:px-8 md:py-24 xl:px-[75px] xl:py-[113px]">
               {aboutUsItems.map((item) => (
                 <div key={item.title} className="flex items-start gap-x-5">
                   <img
@@ -62,7 +60,7 @@ export const AboutUs = () => {
                     <p className="text-2xl font-bold leading-[30px]">
                       {t(item.title)}
                     </p>
-                    <p className="text-sm text-[#757575]">
+                    <p className="text-sm text-dark-gray2">
                       {t(item.description)}
                     </p>
                   </div>
@@ -72,12 +70,13 @@ export const AboutUs = () => {
           </div>
         </div>
 
+        {/* Witch and map */}
         <div className="relative pt-[260px] md:pt-[404px]">
           <div className="absolute left-1/2 top-10 -translate-x-1/2">
             <img
               src="/images/witch.png"
               alt="witch"
-              className="h-auto max-w-[300px] animate-pulse md:max-w-[533px]"
+              className="h-auto max-w-[300px] animate-move md:max-w-[533px]"
             />
           </div>
           <div className="w-full">

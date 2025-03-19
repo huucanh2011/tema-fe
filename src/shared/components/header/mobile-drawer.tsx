@@ -1,3 +1,5 @@
+'use client';
+
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
 import { useEffect, useState } from 'react';
@@ -44,12 +46,14 @@ export const MobileDrawer = () => {
           </button>
         </div>
 
+        {/* <Navigation></Navigation> */}
         <nav className="mt-4 w-full">
           <ul className="flex flex-col divide-y">
             {menuItems.map((menu) => (
               <li key={menu.href} className="w-full py-6">
                 <Link
                   href={menu.href}
+                  onClick={() => setIsOpen(false)}
                   className="flex items-center justify-center text-sm font-bold uppercase"
                 >
                   {t(menu.label)}

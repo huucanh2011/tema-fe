@@ -1,10 +1,9 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import Balancer from 'react-wrap-balancer';
 
 import { useCountdown } from '@/shared/hooks/use-countdown';
-import { InputEmail } from '@/shared/components/ui/input-email';
+import { InputEmail } from '@/shared/components/input-email';
 
 export const Banner = () => {
   const t = useTranslations('banner');
@@ -15,18 +14,16 @@ export const Banner = () => {
       <div className="mx-auto max-h-[656px] px-4 pt-[68px] md:max-w-[860px] md:pt-[132px]">
         <div className="flex flex-col items-center justify-center">
           {/* Title */}
-          <h1 className="mb-[38px] mt-6 text-center font-playfair text-[40px] font-black leading-[50px] text-white md:mb-[21px] md:text-[80px] md:leading-[120px]">
-            <Balancer>
-              <span className="hidden md:block">{t('title')}</span>
-              <span
-                className="block md:hidden"
-                dangerouslySetInnerHTML={{ __html: t('title_html') }}
-              />
-            </Balancer>
+          <h1 className="mb-[38px] mt-6 text-center font-playfair text-40 font-black leading-[50px] text-white md:mb-[21px] md:text-80 md:leading-[120px]">
+            <span className="hidden md:block">{t('title')}</span>
+            <span
+              className="block md:hidden"
+              dangerouslySetInnerHTML={{ __html: t('title_html') }}
+            />
           </h1>
 
           {/* Countdown */}
-          <div className="mb-10 flex h-[118px] w-full max-w-[756px] items-center justify-evenly rounded-[21px] bg-white px-[26px] py-6 md:mb-[97px] md:h-[150px]">
+          <div className="mb-10 flex h-[118px] w-full max-w-[756px] items-center justify-evenly rounded-[21px] bg-white px-[26px] py-6 md:mb-16 md:h-[150px] xl:mb-[97px]">
             <div className="flex w-[54px] flex-col items-center justify-center gap-2.5">
               <p className="font-playfair text-4xl font-black md:text-6xl md:leading-[64px]">
                 {days}
@@ -36,7 +33,7 @@ export const Banner = () => {
               </div>
             </div>
 
-            <span className="text-[40px] md:text-[65px]">:</span>
+            <span className="text-40 md:text-65">:</span>
 
             <div className="flex w-[54px] flex-col items-center justify-center gap-2.5">
               <p className="font-playfair text-4xl font-black md:text-6xl md:leading-[64px]">
@@ -47,7 +44,7 @@ export const Banner = () => {
               </div>
             </div>
 
-            <span className="text-[40px] md:text-[65px]">:</span>
+            <span className="text-40 md:text-65">:</span>
 
             <div className="flex w-[54px] flex-col items-center justify-center gap-2.5">
               <p className="font-playfair text-4xl font-black md:text-6xl md:leading-[64px]">
@@ -58,7 +55,7 @@ export const Banner = () => {
               </div>
             </div>
 
-            <span className="text-[40px] md:text-[65px]">:</span>
+            <span className="text-40 md:text-65">:</span>
 
             <div className="flex w-[54px] flex-col items-center justify-center gap-2.5">
               <p className="font-playfair text-4xl font-black md:text-6xl md:leading-[64px]">

@@ -29,7 +29,7 @@ export const LangDropdown = ({ isMobile = false }: LangDropdownProps) => {
         <button
           onClick={() => setShowDropdown(!showDropdown)}
           className={cn('flex h-10 items-center justify-center', {
-            'w-20 rounded-lg border border-[#AFAFAF] bg-[#F6F6F6]': isMobile,
+            'w-20 rounded-lg border border-dark-gray bg-light-gray': isMobile,
           })}
         >
           <div className="flex items-center gap-x-1">
@@ -47,7 +47,7 @@ export const LangDropdown = ({ isMobile = false }: LangDropdownProps) => {
             <div
               className={cn(
                 'h-20 w-[156px] rounded-lg border bg-white p-2',
-                isMobile ? 'border-[#AFAFAF]' : 'border-border',
+                isMobile ? 'border-dark-gray' : 'border-border',
               )}
             >
               {Object.keys(langItems).map((key) => (

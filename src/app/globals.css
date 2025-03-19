@@ -4,8 +4,13 @@
 
 :root {
   --border: #eeeeee;
+  --dark-gray2: #757575;
+  --dark-gray: #AFAFAF;
+  --light-gray: #f6f6f6;
+  --blue: #079BEE;
 }
 
 html {
+  min-height: 100%;
   scroll-behavior: smooth !important;
 }
