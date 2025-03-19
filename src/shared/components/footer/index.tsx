@@ -8,7 +8,7 @@ export const Footer = () => {
   const t = useTranslations('footer');
 
   return (
-    <footer>
+    <footer id="contact-us">
       <div className="min-h-[466px] w-full bg-[url('/images/footer.png')] bg-cover bg-center bg-no-repeat text-white">
         <div className="mx-auto grid max-w-[1460px] grid-cols-1 gap-y-[68px] px-4 pb-16 pt-10 md:gap-x-8 md:pb-[100px] md:pt-[104px] lg:grid-cols-3 xl:gap-x-10">
           {/* Logo and social links */}

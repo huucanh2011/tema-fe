@@ -15,7 +15,7 @@ export const ScrollToTop = () => {
   return (
     <button
       className={cn(
-        'fixed bottom-10 right-0 z-50 transition-transform duration-300 md:right-2 xl:right-20',
+        'fixed bottom-10 right-0 z-10 transition-transform duration-300 md:right-2 xl:right-20',
         scrollY > 200 && 'rotate-180',
         scrollY <= 200 && 'rotate-0',
       )}
