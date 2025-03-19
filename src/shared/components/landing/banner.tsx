@@ -1,9 +1,10 @@
 'use client';
 
-import { useCountdown } from '@/shared/hooks/use-countdown';
 import { useTranslations } from 'next-intl';
 import Balancer from 'react-wrap-balancer';
-import { InputEmail } from '../ui/input';
+
+import { useCountdown } from '@/shared/hooks/use-countdown';
+import { InputEmail } from '@/shared/components/ui/input-email';
 
 export const Banner = () => {
   const t = useTranslations('banner');
@@ -19,7 +20,7 @@ export const Banner = () => {
               <span className="hidden md:block">{t('title')}</span>
               <span
                 className="block md:hidden"
-                dangerouslySetInnerHTML={{ __html: t('titleHtml') }}
+                dangerouslySetInnerHTML={{ __html: t('title_html') }}
               />
             </Balancer>
           </h1>

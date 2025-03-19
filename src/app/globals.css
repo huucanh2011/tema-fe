@@ -3,5 +3,9 @@
 @tailwind utilities;
 
 :root {
-  --border: #EEEEEE;
+  --border: #eeeeee;
+}
+
+html {
+  scroll-behavior: smooth !important;
 }

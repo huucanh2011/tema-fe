@@ -14,7 +14,7 @@ export const InputEmail = ({ className }: InputEmailProps) => {
         type="email"
         placeholder={t('placeholder')}
         className={cn(
-          'h-14 rounded-lg bg-white py-[18px] pl-[14px] pr-[50px]',
+          'h-14 rounded-lg bg-white py-[18px] pl-[14px] pr-[50px] text-sm',
           className,
         )}
       />

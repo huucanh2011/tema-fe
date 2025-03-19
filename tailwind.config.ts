@@ -18,6 +18,18 @@ const config: Config = {
       fontSize: {
         '10': '0.625rem',
       },
+      keyframes: {
+        move: {
+          '0%': { transform: 'translateX(0px)' },
+          '25%': { transform: 'translateX(50px)' },
+          '50%': { transform: 'translateY(50px)' },
+          '75%': { transform: 'translateX(0px)' },
+          '100%': { transform: 'translateY(0px)' },
+        },
+      },
+      animation: {
+        move: 'move 3s linear infinite',
+      },
     },
   },
   // eslint-disable-next-line @typescript-eslint/no-require-imports
