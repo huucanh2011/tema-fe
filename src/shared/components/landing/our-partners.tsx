@@ -1,3 +1,5 @@
+import { useTranslations } from 'next-intl';
+
 import { ourPartnersItems } from '@/config';
 import {
   Carousel,
@@ -8,12 +10,14 @@ import {
 } from '@/shared/components/carousel';
 
 export const OurPartners = () => {
+  const t = useTranslations('our-partners');
+
   return (
     <section id="partners">
       <div className="space-y-10 bg-light-gray py-10 md:space-y-20 md:py-[120px]">
         <div className="px-4 text-center">
           <h2 className="font-playfair text-40 font-black leading-[50px] md:text-[60px] md:leading-[80px]">
-            Our Partners
+            {t('title')}
           </h2>
         </div>
 
